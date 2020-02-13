@@ -38,5 +38,5 @@ permalink: /about/
     - Monitored SIEM tools to respond to network traffic incidents
     
 #### Education
-    Indiana University, Bloomington
-    Bachelor of Science in Informatics
+*    Indiana University, Bloomington
+     Bachelor of Science in Informatics
