@@ -37,6 +37,6 @@ permalink: /about/
     - Managed Symantec Endpoint Protection infrastructure of thousands of endpoints
     - Monitored SIEM tools to respond to network traffic incidents
     
-*   **Education**
+#### Education
     Indiana University, Bloomington
     Bachelor of Science in Informatics
