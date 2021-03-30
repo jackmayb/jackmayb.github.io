@@ -11,8 +11,16 @@ permalink: /about/
 * Burp Suite, Cobalt Strike, Metasploit, Empire, Nessus, Qualys, Wireshark, Nmap, Kismet, Aircrack-ng, Python(Intermediate), SQL, LogRhythm, SIEM, Cylance, Windows, Linux, OSX, TCP/IP, Active Directory *
 
 #### Work Experience
+*   **Security Research and Consulting**
+    - Researching new techniques and attack paths
+    - Working with clients on various security initiatives
+
+*   **Largest Cloud Provider**
+    Security Engineer/IR, July 2020 - March 2021
+    - Triage security incidents across all of the services
+
 *   **Large Well Known Firm**
-    Offensive Security Consultant, April 2016 - Present
+    Offensive Security Consultant, April 2016 - July 2020
     - Performed PCI/Perimeter/Internal Network Penetration Testing for Fortune 500 clients
     - Performed Web Application Testing
     - Performed Wireless Security Assessments
@@ -38,5 +46,4 @@ permalink: /about/
     - Monitored SIEM tools to respond to network traffic incidents
     
 #### Education
-*    Indiana University, Bloomington
-     Bachelor of Science in Informatics
+*    Indiana University
