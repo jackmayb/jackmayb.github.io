@@ -3,7 +3,7 @@ layout: post
 title: Quick Wireless Methodology
 ---
 
-# Phases
+Phases
 
 ## Passive Discovery
 Identification of client SSIDs
