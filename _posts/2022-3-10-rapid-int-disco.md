@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Testing Methodology
+title: Rapid Disco Internal Methodology
 ---
 
 Rapid Discovery Methodology for Internal Pentest
