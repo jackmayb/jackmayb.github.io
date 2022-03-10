@@ -12,12 +12,16 @@ permalink: /about/
 
 #### Work Experience
 *   **Security Research and Consulting**
-    - Researching new techniques and attack paths
-    - Working with clients on various security initiatives
+    - Perform research driven adversarial simulations based off current threat intel and cutting edge TTPs 
+    - Conduct web and mobile testing across multiple platforms and languages
+    - Execute comprehensive cloud assessments (AWS, Azure)
+    - Prepare client-facing reports detailing key vulnerabilities and remediations
 
 *   **Largest Cloud Provider**
     Security Engineer/IR, July 2020 - March 2021
-    - Triage security incidents across all of the services
+    - Performed security incident response for all of AWS services
+    - Engaged directly with engineers throughout the company to triage security risks, implement secure solutions for customers, and validate organization's efforts
+    - Participated in oncall rotation and coordination with multi-national team
 
 *   **Large Well Known Firm**
     Offensive Security Consultant, April 2016 - July 2020
