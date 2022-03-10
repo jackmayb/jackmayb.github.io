@@ -8,7 +8,6 @@ permalink: /about/
 
 #### Offensive Security Consultant
 
-* Burp Suite, Cobalt Strike, Metasploit, Empire, Nessus, Qualys, Wireshark, Nmap, Kismet, Aircrack-ng, Python(Intermediate), SQL, LogRhythm, SIEM, Cylance, Windows, Linux, OSX, TCP/IP, Active Directory *
 
 #### Work Experience
 *   **Security Research and Consulting**
