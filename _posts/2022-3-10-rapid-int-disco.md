@@ -4,7 +4,7 @@ title: Rapid Disco Internal Methodology
 ---
 
 Rapid Discovery Methodology for Internal Pentest
-
+```
 nmap -sn -T4 --max-retries=1 --max-rtt-timeout=200ms 10.0-255.0-255.1,254 172.16-31.0-255.1,254 192.168.0-255.1,254 -oA segment-disco
 
 cat segment-disco.gnmap | grep Up | sort –uV | cut -d " " -f 2 | cut -d "." -f 1-3 | sed 's/$/.0\/24/' > livesegments
@@ -22,3 +22,4 @@ grep -i tomcat http-title-8443 | cut -d : -f 1 | cut -d "[" -f 3 | sort -u > /ro
 
 grep -i jenkins http-title-8080 | cut -d : -f 1 | cut -d "[" -f 3 | sort -u > /root/client/jenkins-8080
 grep -i jenkins http-title-8443 | cut -d : -f 1 | cut -d "[" -f 3 | sort -Vu > /root/client/jenkins-8443
+```
