@@ -10,20 +10,24 @@ permalink: /about/
 
 
 #### Work Experience
+*   **Defensive Research** Present
+    - Threat Simulation
+    - Detection Engineering
+
 *   **Security Research and Consulting**
     - Perform research driven adversarial simulations based off current threat intel and cutting edge TTPs 
     - Conduct web and mobile testing across multiple platforms and languages
     - Execute comprehensive cloud assessments (AWS, Azure)
     - Prepare client-facing reports detailing key vulnerabilities and remediations
 
-*   **Largest Cloud Provider**
-    Security Engineer/IR, July 2020 - March 2021
-    - Performed security incident response for all of AWS services
+*   **Large Cloud Provider**
+    Security Engineer/IR, 2020 - 2021
+    - Performed security incident response for all of cloud services
     - Engaged directly with engineers throughout the company to triage security risks, implement secure solutions for customers, and validate organization's efforts
     - Participated in oncall rotation and coordination with multi-national team
 
 *   **Large Well Known Firm**
-    Offensive Security Consultant, April 2016 - July 2020
+    Offensive Security Consultant, 2016 - 2020
     - Performed PCI/Perimeter/Internal Network Penetration Testing for Fortune 500 clients
     - Performed Web Application Testing
     - Performed Wireless Security Assessments
@@ -33,7 +37,7 @@ permalink: /about/
     - Helped build out internal testing methodologies and processes
     
 *   **Smaller Midwest Firm**
-    Security Analyst, May 2015 - April 2016
+    Security Analyst, 2015 - 2016
     - Built out Vulnerability Management Program at clients ranging from 15 endpoints to 200+
     - Performed Internal and External penetration testing on enterprises varying in size and technologies used
     - Conducted Risk assessments for clients on topics ranging from Windows 2003 server migration to overall network security       posture
@@ -41,7 +45,7 @@ permalink: /about/
     - Gained excellent experience working with clients and building lasting relationships through going above and beyond project requirements
     
 *   **Fortune 150**
-    Sr. Technology Analyst | Tier 2 Security, January 2014 - May 2015
+    Sr. Technology Analyst | Tier 2 Security, 2014 - 2015
     - Worked within a Security Operations Center in a 50,000+ endpoint enterprise environment
     - Performed vulnerability scans of hosts and web applications for customer
     - Provided insights and reports based results of vulnerability scans
