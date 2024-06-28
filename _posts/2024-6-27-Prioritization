@@ -1,3 +1,8 @@
+---
+layout: post
+title: Prioritization of Work
+---
+
 In response to the evolving cybersecurity landscape, I propose the implementation of a dynamic task queue system within our security operations. This initiative is designed to enhance our responsiveness and efficiency by adapting our workflow to the priorities and urgencies of different security threats.
 The cornerstone of this system is a set of clear prioritization criteria that classifies tasks by their urgency and the potential impact of not addressing them. This ensures that we focus our efforts first on the most critical issues. Additionally, we will prioritize tasks that address the most significant gaps in our current security coverage, especially targeting known techniques that are poorly covered.
 We plan to structure our response efforts through a tiered framework. Critical incidents and alerts that demand immediate attention will be classified as Tier 1. Tasks that are important but not immediately critical, such as developing new detection methods for lesser-covered techniques, will fall under Tier 2. Regular maintenance, updates, and less urgent threat hunts will be categorized as Tier 3.
