@@ -6,7 +6,7 @@ permalink: /about/
 
 ## Jackson Byam
 
-#### Offensive Security Consultant
+#### Security Researcher
 
 
 #### Work Experience
