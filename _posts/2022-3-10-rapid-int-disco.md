@@ -3,8 +3,6 @@ layout: post
 title: Rapid Disco Internal Methodology
 ---
 
-Rapid Discovery Methodology for Internal Pentest
-
 Thorough network mapping and service discovery form the foundation of an effective internal penetration test. Before attempting any exploitation, we must gain situational awareness of the expansive attack surface sprawling across client subnets, devices, and services. This reconnaissance phase involves sweeping the internal IP ranges to identify live hosts, enumerate open ports, banner grab to fingerprint services, and detect known vulnerabilities. Rapid network discovery techniques help speed up the reconnaissance process allowing us to cover more ground. By methodically probing and cataloguing the various points of entry into the network, we gain the insight needed to surgically identify promising entry vectors for intrusion. Internal discovery provides the roadmap to guide more invasive penetration testing phases.
 
 - nmap \-sn \-T4 \-\-max\-retries=1 \-\-max\-rtt\-timeout=200ms 10.0\-255.0\-255.1,254 172.16\-31.0\-255.1,254 192.168.0\-255.1,254 \-oA segment\-disco
