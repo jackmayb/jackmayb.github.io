@@ -1,3 +1,7 @@
+---
+layout: post
+title: DE Principles
+---
 Detection engineering is a crucial aspect of cybersecurity, focusing on designing and implementing effective methods for identifying security threats. Here are some key principles and practices of effective detection engineering based on the provided sources:
 
 ●
