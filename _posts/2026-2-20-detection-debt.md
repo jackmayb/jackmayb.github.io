@@ -45,21 +45,26 @@ Detection debt isn't born from negligence. It's almost always the result of stru
 **Paying Down the Principal**
 
 You can't declare bankruptcy on detection debt, but you can start actively managing it. The key is to move beyond generic "tune your rules" advice and build practices that make debt management a structural part of your detection engineering lifecycle.
-- Lead With Your Hunts
+- *Lead With Your Hunts*
 If your organization runs a threat hunting program, you already have one of the most powerful tools for identifying detection debt — you just might not be using it that way. Every threat hunt is an opportunity to simultaneously audit your existing detection coverage.
 Here's what that looks like in practice: when a hunt targets a specific technique (say, lateral movement via WMI), the hunt team shouldn't just be looking for evidence of that activity in the environment. They should also be asking: "Do we have a detection rule for this? If so, did it fire during our hunt window? If we simulated or found real activity, did the rule catch it?" If the answer is no, you've just identified a silent failure — and that finding should be formally documented alongside the hunt's other results.
 Building this "detection validation" step into your hunt methodology turns every hunt into a two-for-one: you get threat discovery and coverage auditing in the same engagement.
-- Enforce Strict Metadata Standards
+- *Enforce Strict Metadata Standards*
 Every detection in your pipeline should carry a minimum set of metadata: an assigned owner, a creation date, a list of data source dependencies, a "last validated" date, and a brief description of the threat model it addresses. This isn't bureaucracy — it's the difference between a maintainable detection library and a graveyard of mystery rules. When a rule has no owner and no documentation, it becomes untouchable, and untouchable rules are how silent failures are born.
-- Build a Deprecation Pipeline
+- *Build a Deprecation Pipeline*
 Most teams have a well-defined process for creating and deploying new detections. Far fewer have a formal process for retiring them. Build one. A deprecation pipeline should include criteria for when a rule is a candidate for retirement (e.g., no true positives in 90 days, data source no longer ingested, technique superseded by a newer rule), a review step before deactivation, and an archive process so you can recover rules if needed. Making deletion feel safe and reversible lowers the psychological barrier.
-- Measure Capability, Not Count
+- *Measure Capability, Not Count*
 Stop reporting on the number of active rules and start tracking metrics that reflect actual detection health. Some starting points:
-	•	Fire rate: How often does this rule generate any alert at all? A rule that hasn't fired in six months might be silently broken — or it might be highly specific and valuable. The metric alone doesn't tell you, but it flags rules that need investigation.
-	•	True positive rate: Of the alerts this rule generates, what percentage result in a real investigation? A rule with a 2% true positive rate is a noise generator and a candidate for aggressive tuning or retirement.
-	•	Last actionable alert date: When was the last time this rule led to a meaningful security action? This is the single most revealing metric for detection health.
-	•	Data source dependency status: Are the log sources this rule depends on still being ingested at the expected volume and schema? This catches silent failures before they go unnoticed for months.
-- Schedule It Like Maintenance
+	
+    •	Fire rate: How often does this rule generate any alert at all? A rule that hasn't fired in six months might be silently broken — or it might be highly specific and valuable. The metric alone doesn't tell you, but it flags rules that need investigation.
+	
+    •	True positive rate: Of the alerts this rule generates, what percentage result in a real investigation? A rule with a 2% true positive rate is a noise generator and a candidate for aggressive tuning or retirement.
+	
+    •	Last actionable alert date: When was the last time this rule led to a meaningful security action? This is the single most revealing metric for detection health.
+	
+    •	Data source dependency status: Are the log sources this rule depends on still being ingested at the expected volume and schema? This catches silent failures before they go unnoticed for months.
+    
+- *Schedule It Like Maintenance*
 Move away from tuning rules "when we get around to it." Detection reviews need to be a formalized cadence — quarterly at minimum, monthly if your environment changes frequently. Treat it like patching: it's not glamorous, but skipping it has compounding consequences.
 
 **Detection Debt as a Maturity Indicator**
