@@ -2,7 +2,6 @@
 layout: post
 title: Detection Debt
 ---
-***Stop Counting Rules: Why Detection Debt Is Quietly Killing Your SOC***
 
 Every software engineering leader understands the creeping, compounding cost of technical debt. It's the code that's "good enough for now," the patched-together legacy systems, and the undocumented workarounds that eventually slow feature development to a crawl.
 
