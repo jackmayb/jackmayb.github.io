@@ -11,7 +11,7 @@ permalink: /about/
 
 #### Work Experience
 *   **Defensive Research** Present
-    - Threat Simulation
+    - Threat Hunting
     - Detection Engineering
 
 *   **Security Research and Consulting**
