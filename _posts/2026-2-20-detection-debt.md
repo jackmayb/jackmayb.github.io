@@ -3,8 +3,6 @@ layout: post
 title: Detection Debt
 ---
 
-**Detection Debt**
-
 Every engineering leader knows the slow burn of technical debt — the “good enough for now” code, the duct-taped legacy systems, and undocumented workarounds that eventually grind development to a halt.
 Cybersecurity has its own version, and the stakes are often higher. We call it Detection Debt.
 It’s the quiet buildup of outdated, noisy, broken, or abandoned detection rules clogging your SOC. Left unchecked, it wastes analyst time, buries real threats in alert noise, and creates a false sense of security.
