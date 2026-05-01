@@ -10,10 +10,10 @@ Here’s how it piles up, what it really costs, and how to start paying it down.
 
 **The Main Types of Detection Debt**
 Detection debt shows up in a few common forms:
-	•	Legacy Leftovers: Rules written by people who’ve long since left. No one remembers why they exist or what they were meant to catch. They’re like old furniture from the previous tenant — nobody wants it, but no one wants to deal with throwing it out. This also includes rules monitoring dead or barely-used software.
-	•	Silent Failures: The scariest kind. The rule still shows “enabled,” but it’s matching on nothing because a schema changed, a migration happened, or an EDR update broke the logic. Example: A rule watching for EventCode=7045 in Windows logs goes dark after switching EDR platforms. It never fires again, and no one notices for months.
-	•	Noise Generators: Untuned rules that flood analysts with false positives. Triage starts feeling like digging for gold in a trash heap, and people quietly learn to ignore them.
-	•	Copy-Paste Traps: Community Sigma rules or vendor intel dropped in verbatim, never adapted to your environment or baseline.
+	* Legacy Leftovers: Rules written by people who’ve long since left. No one remembers why they exist or what they were meant to catch. They’re like old furniture from the previous tenant — nobody wants it, but no one wants to deal with throwing it out. This also includes rules monitoring dead or barely-used software.
+	* Silent Failures: The scariest kind. The rule still shows “enabled,” but it’s matching on nothing because a schema changed, a migration happened, or an EDR update broke the logic. Example: A rule watching for EventCode=7045 in Windows logs goes dark after switching EDR platforms. It never fires again, and no one notices for months.
+	* Noise Generators: Untuned rules that flood analysts with false positives. Triage starts feeling like digging for gold in a trash heap, and people quietly learn to ignore them.
+	* Copy-Paste Traps: Community Sigma rules or vendor intel dropped in verbatim, never adapted to your environment or baseline.
 
 **What It Really Costs Your Team**
 Every piece of detection debt drags on daily operations.
@@ -29,17 +29,17 @@ A high rule count is a vanity metric. What matters is whether your detections ac
 
 **Why Detection Debt Keeps Growing**
 This rarely comes from negligence. It stems from structure and incentives:
-	•	Teams reward building new detections (it looks great in reviews) far more than maintaining or retiring old ones.
-	•	Fear of deletion: No one wants to be the person who disabled the rule that would’ve caught the next big incident.
-	•	Employee churn: When rule creators leave, teams inherit undocumented black boxes they’re afraid to touch.
+	* Teams reward building new detections (it looks great in reviews) far more than maintaining or retiring old ones.
+	* Fear of deletion: No one wants to be the person who disabled the rule that would’ve caught the next big incident.
+	* Employee churn: When rule creators leave, teams inherit undocumented black boxes they’re afraid to touch.
 
 **How to Pay It Down**
 You can’t wipe it out overnight, but you can manage it better:
-	•	Leverage threat hunts: When hunting a technique, also check if your existing rules would have caught it. Did they fire? Did they miss? Turn every hunt into coverage validation.
-	•	Add basic metadata: Require every rule to have an owner, creation date, data sources, last validated date, and a short threat description. This prevents mystery rules.
-	•	Create a deprecation process: Define clear criteria for retirement (no true positives in 90 days, superseded technique, etc.), add a quick review, and archive instead of permanently deleting. Make killing rules feel safe.
-	•	Track better metrics: Ditch “number of active rules.” Instead monitor fire rate, true positive rate, last actionable alert date, and data source health.
-	•	Schedule maintenance: Put recurring rule reviews on the calendar — quarterly minimum. Treat it like patching: not sexy, but skipping it compounds the problem.
+	* Leverage threat hunts: When hunting a technique, also check if your existing rules would have caught it. Did they fire? Did they miss? Turn every hunt into coverage validation.
+	* Add basic metadata: Require every rule to have an owner, creation date, data sources, last validated date, and a short threat description. This prevents mystery rules.
+	* Create a deprecation process: Define clear criteria for retirement (no true positives in 90 days, superseded technique, etc.), add a quick review, and archive instead of permanently deleting. Make killing rules feel safe.
+	* Track better metrics: Ditch “number of active rules.” Instead monitor fire rate, true positive rate, last actionable alert date, and data source health.
+	* Schedule maintenance: Put recurring rule reviews on the calendar — quarterly minimum. Treat it like patching: not sexy, but skipping it compounds the problem.
 
 **Detection Debt Shows Your Maturity**
 Early security programs focus on adding coverage — that’s normal. Mature teams realize that curating, maintaining, and pruning rules is equally important.
