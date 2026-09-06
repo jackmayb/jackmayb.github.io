@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact Meridian Labs about security research, threat hunting, detection engineering, or adversary simulation work.">
+  <title>Contact - Meridian Labs</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='none' stroke='%23333' stroke-width='2'/><ellipse cx='16' cy='16' rx='6' ry='14' fill='none' stroke='%23333' stroke-width='1.5'/><line x1='2' y1='16' x2='30' y2='16' stroke='%23333' stroke-width='1.5'/></svg>">
+</head>
+<body>
+
+  <!-- Menu Bar -->
+  <div class="menu-bar">
+    <div class="menu-bar-logo">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="13" stroke="#333" stroke-width="2"/>
+        <ellipse cx="16" cy="16" rx="5.5" ry="13" stroke="#333" stroke-width="1.5"/>
+        <line x1="3" y1="16" x2="29" y2="16" stroke="#333" stroke-width="1.5"/>
+        <line x1="5" y1="9" x2="27" y2="9" stroke="#333" stroke-width="1"/>
+        <line x1="5" y1="23" x2="27" y2="23" stroke="#333" stroke-width="1"/>
+      </svg>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="menu-bar-spacer"></div>
+  </div>
+
+  <!-- Desktop -->
+  <div class="desktop">
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-buttons">
+          <div class="title-bar-btn close"></div>
+          <div class="title-bar-btn"></div>
+          <div class="title-bar-btn"></div>
+        </div>
+        <div class="title-bar-title">Contact</div>
+      </div>
+      <div class="window-content">
+
+        <h1>Get In Touch</h1>
+
+        <hr class="separator">
+
+        <p>Ready to strengthen your security posture? We'd like to hear from you. Reach out using the form below or contact us directly.</p>
+
+        <div class="contact-form">
+          <form id="contact-form" action="mailto:contact@meridianlabs.io" method="get">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject:</label>
+              <input type="text" id="subject" name="subject" placeholder="How can we help?" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" name="message" placeholder="Tell us about your security needs..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+          <p id="contact-status" class="form-status" aria-live="polite">Submitting this form opens your email application.</p>
+        </div>
+
+        <hr class="separator">
+
+        <div class="contact-info">
+          <p><strong>Email:</strong> <a href="mailto:contact@meridianlabs.io">contact@meridianlabs.io</a></p>
+          <p><strong>Location:</strong> Washington, D.C. Metro Area</p>
+          <p><strong>Availability:</strong> Engagements worldwide</p>
+        </div>
+
+      </div>
+      <div class="window-footer">
+        &copy; 2026 Meridian Labs. All rights reserved.
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

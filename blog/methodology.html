@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="1. Discovery Phase The foundation of any thorough penetration test begins with discovery. During this phase: Map network&#39;s footprint to understand its scope and boundaries Conduct various scans (ICMP, TCP, UDP) to identify live systems Determine which systems…">
+  <title>Testing Methodology - Meridian Labs</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='none' stroke='%23333' stroke-width='2'/><ellipse cx='16' cy='16' rx='6' ry='14' fill='none' stroke='%23333' stroke-width='1.5'/><line x1='2' y1='16' x2='30' y2='16' stroke='%23333' stroke-width='1.5'/></svg>">
+</head>
+<body>
+
+  <div class="menu-bar">
+    <div class="menu-bar-logo" aria-label="Meridian Labs">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="16" cy="16" r="13" stroke="#333" stroke-width="2"/>
+        <ellipse cx="16" cy="16" rx="5.5" ry="13" stroke="#333" stroke-width="1.5"/>
+        <line x1="3" y1="16" x2="29" y2="16" stroke="#333" stroke-width="1.5"/>
+        <line x1="5" y1="9" x2="27" y2="9" stroke="#333" stroke-width="1"/>
+        <line x1="5" y1="23" x2="27" y2="23" stroke="#333" stroke-width="1"/>
+      </svg>
+    </div>
+    <nav aria-label="Primary navigation">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../blog.html" class="active">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="menu-bar-spacer"></div>
+  </div>
+  <main class="desktop">
+    <article class="window">
+      <div class="title-bar">
+        <div class="title-bar-buttons" aria-hidden="true">
+          <div class="title-bar-btn close"></div>
+          <div class="title-bar-btn"></div>
+          <div class="title-bar-btn"></div>
+        </div>
+        <div class="title-bar-title">Blog Post</div>
+      </div>
+      <div class="window-content">
+        <a href="../blog.html" class="blog-back-link">&larr; Back to Blog</a>
+        <h1>Testing Methodology</h1>
+        <div class="blog-post-meta">February 13, 2020 &bull; Meridian Labs</div>
+        <hr class="separator">
+        <div class="blog-post-content">
+          <h3>1. Discovery Phase</h3>
+          <p>The foundation of any thorough penetration test begins with discovery. During this phase:</p>
+          <ul>
+          <li>Map network&#39;s footprint to understand its scope and boundaries</li>
+          <li>Conduct various scans (ICMP, TCP, UDP) to identify live systems</li>
+          <li>Determine which systems are responding and accessible</li>
+          <li>Build a comprehensive picture of network environment</li>
+          </ul>
+          <p>This phase is crucial as it establishes our testing baseline and helps define the attack surface for subsequent phases.</p>
+          <h3>2. Enumeration/Target Profiling Phase</h3>
+          <p>Once it&#39;s understood what&#39;s available on the network, dig deeper to identify:</p>
+          <ul>
+          <li>Operating system types and versions</li>
+          <li>Open ports and listening services</li>
+          <li>Virtual hosts that may be present</li>
+          <li>Web applications and management consoles</li>
+          <li>Software versions through &quot;banner grabbing&quot;</li>
+          <li>Technology stacks in use (PHP, Tomcat, etc.)</li>
+          <li>SMB configurations, including version information and file shares</li>
+          <li>Potential configuration issues</li>
+          <li>Default files that might expose information</li>
+          </ul>
+          <p>This detailed cataloging helps to understand the technologies in your environment and how they interact.</p>
+          <h3>3. Vulnerability Identification Phase</h3>
+          <p>With a clear picture of the environment, begin identifying potential security gaps:</p>
+          <ul>
+          <li>Deploy automated vulnerability scanning tools appropriate for the technology stack</li>
+          <li>Perform manual testing of common vulnerabilities</li>
+          <li>Analyze application logic to determine normal behavior and potential deviations</li>
+          <li>Cross-reference software versions against known vulnerability databases</li>
+          <li>Identify weaknesses in services (telnet, unencrypted HTTP logins, SSL issues)</li>
+          <li>Classify systems and identify attack vectors based on collected data</li>
+          <li>Validate findings to eliminate false positives</li>
+          </ul>
+          <p>This phase combines automated tools with human expertise to ensure comprehensive coverage while minimizing false positives.</p>
+          <h3>4. Attack Scenario Phase</h3>
+          <p>This is where theory is put into practice:</p>
+          <ul>
+          <li>Exploit identified vulnerabilities to determine their actual severity</li>
+          <li>Leverage known or logical vulnerabilities to attempt access to systems or data</li>
+          <li>Validate whether theoretical vulnerabilities pose real-world risks</li>
+          <li>Identify sensitive information that might be exposed</li>
+          <li>Gather additional knowledge that could inform other attack vectors</li>
+          </ul>
+          <p>Important notes on attack approach:</p>
+          <ul>
+          <li>No denial of service (DoS) attacks</li>
+          <li>Avoid any exploits that could be detrimental to services</li>
+          <li>For high-risk vulnerabilities, will consult before proceeding</li>
+          <li>Immediately notify of any critical vulnerabilities that could lead to imminent compromise</li>
+          </ul>
+          <h3>5. Post-Exploitation Phase</h3>
+          <p>If we successfully gain access to systems:</p>
+          <ul>
+          <li>Utilize discovered information from previous successful attacks</li>
+          <li>Determine if compromised systems can be leveraged to attack other hosts</li>
+          <li>Pivot to other systems where possible</li>
+          <li>Expand access to demonstrate the potential impact</li>
+          <li>Search for sensitive information such as credentials, intellectual property, payment card data, health information, or other valuable assets</li>
+          </ul>
+          <p>This phase demonstrates the real-world impact of security gaps and helps prioritize remediation efforts.</p>
+          <h3>6. Reporting Phase</h3>
+          <p>Finally, document findings:</p>
+          <ul>
+          <li>Gather all information and evidence into a comprehensive report</li>
+          <li>Provide clear explanations of vulnerabilities discovered</li>
+          <li>Detail the potential business impact of each issue</li>
+          <li>Offer specific, actionable remediation recommendations</li>
+          <li>Present findings in business-friendly language while including technical details</li>
+          </ul>
+          <p>Reports are designed to be valuable for both executive stakeholders and technical teams responsible for implementing fixes.</p>
+          <p>Throughout the testing process, maintain regular communication with team and adhere to the agreed-upon scope. For any critical findings that could represent an immediate risk, notify immediately rather than waiting for the final report.</p>
+          <p>Before beginning any engagement, work to understand:</p>
+          <ul>
+          <li>Any third-party sites that might be in scope</li>
+          <li>Notification requirements and key contacts</li>
+          <li>IPS/IDS systems that may need to be adjusted</li>
+          <li>Specific goals and what is hoped to be achieved through the penetration test</li>
+          </ul>
+        </div>
+        <hr class="separator">
+        <a href="../blog.html" class="blog-back-link">&larr; Back to Blog</a>
+      </div>
+      <div class="window-footer">&copy; 2026 Meridian Labs. All rights reserved.</div>
+    </article>
+  </main>
+  <script src="../js/main.js"></script>
+</body>
+</html>

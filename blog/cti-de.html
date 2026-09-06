@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="When used right cyber Threat Intelligence (CTI) is one of the most powerful tools we have in detection engineering. Too many teams treat it as a nice-to-have feed of random IoCs, but when done well, it becomes the foundation for smarter, faster, and more…">
+  <title>How to Actually Use Cyber Threat Intelligence for Detection Engineering - Meridian Labs</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='none' stroke='%23333' stroke-width='2'/><ellipse cx='16' cy='16' rx='6' ry='14' fill='none' stroke='%23333' stroke-width='1.5'/><line x1='2' y1='16' x2='30' y2='16' stroke='%23333' stroke-width='1.5'/></svg>">
+</head>
+<body>
+
+  <div class="menu-bar">
+    <div class="menu-bar-logo" aria-label="Meridian Labs">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="16" cy="16" r="13" stroke="#333" stroke-width="2"/>
+        <ellipse cx="16" cy="16" rx="5.5" ry="13" stroke="#333" stroke-width="1.5"/>
+        <line x1="3" y1="16" x2="29" y2="16" stroke="#333" stroke-width="1.5"/>
+        <line x1="5" y1="9" x2="27" y2="9" stroke="#333" stroke-width="1"/>
+        <line x1="5" y1="23" x2="27" y2="23" stroke="#333" stroke-width="1"/>
+      </svg>
+    </div>
+    <nav aria-label="Primary navigation">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../blog.html" class="active">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="menu-bar-spacer"></div>
+  </div>
+  <main class="desktop">
+    <article class="window">
+      <div class="title-bar">
+        <div class="title-bar-buttons" aria-hidden="true">
+          <div class="title-bar-btn close"></div>
+          <div class="title-bar-btn"></div>
+          <div class="title-bar-btn"></div>
+        </div>
+        <div class="title-bar-title">Blog Post</div>
+      </div>
+      <div class="window-content">
+        <a href="../blog.html" class="blog-back-link">&larr; Back to Blog</a>
+        <h1>How to Actually Use Cyber Threat Intelligence for Detection Engineering</h1>
+        <div class="blog-post-meta">June 27, 2024 &bull; Meridian Labs</div>
+        <hr class="separator">
+        <div class="blog-post-content">
+          <p>When used right cyber Threat Intelligence (CTI) is one of the most powerful tools we have in detection engineering. Too many teams treat it as a nice-to-have feed of random IoCs, but when done well, it becomes the foundation for smarter, faster, and more relevant detections.
+          At its core, good CTI gives you a living picture of what adversaries are actually doing right now. That knowledge lets detection engineers move from playing whack-a-mole to building thoughtful, targeted defenses.</p>
+          <h2>What CTI Actually Does for You</h2>
+          <p>When you incorporate threat intelligence properly, you can:</p>
+          <ul>
+          <li>Anticipate how attackers are likely to behave (their TTPs)</li>
+          <li>Build detections for the earliest possible signs of trouble</li>
+          <li>Respond faster when new threats pop up</li>
+          <li>Focus your limited time and resources on the attacks that matter most to your environment</li>
+          </ul>
+          <p>For example, let’s say CTI shows a new malware campaign using a particular command-and-control pattern. Instead of waiting for it to hit you, you can write a detection rule (or tune an existing one) to spot that pattern early. That’s the difference between reacting to a breach and stopping it in its tracks.</p>
+          <h2>Go Beyond Generic Industry Reports</h2>
+          <p>Here’s where a lot of organizations fall short: they stop at “we’re in financial services, so give me financial threat intel.”
+          That’s a good start, but it’s not enough. The real value comes when you tailor the intelligence to your actual environment. Focus on your tech stack, cloud providers, internal tools, geographic footprint, and specific high-value assets.
+          A bank should care about financial malware and ransomware targeting the sector, sure. But they should care even more about how those threats map to their specific Windows endpoints, AWS workloads, or custom applications. That extra layer of customization is what turns generic intel into high-fidelity detections.</p>
+          <h2>Practical Ways to Integrate CTI</h2>
+          <p>You don’t need a massive team or crazy budget to do this well. Here are some approaches that actually work:</p>
+          <ul>
+          <li>Use a Threat Intelligence Platform (TIP) to collect, enrich, and operationalize the data</li>
+          <li>Feed CTI directly into your SIEM for real-time correlation</li>
+          <li>Automate IOC ingestion and detection rule generation (where it makes sense)</li>
+          <li>Map everything against the MITRE ATT&amp;CK framework so you understand the full attack chain, not just isolated indicators</li>
+          <li>Apply machine learning or behavioral analytics on top of the intel to spot anomalies</li>
+          </ul>
+          <h2>How Do You Know It’s Working?</h2>
+          <p>Track these metrics over time:</p>
+          <ul>
+          <li>Drop in false positives</li>
+          <li>Faster Mean Time to Detect (MTTD) and Mean Time to Respond (MTTR)</li>
+          <li>More threats caught before they cause real damage
+          If these numbers are moving in the right direction, you’re doing it right.</li>
+          </ul>
+          <h2>The Hard Parts (Because There Are Always Hard Parts)</h2>
+          <p>CTI isn’t a silver bullet. Expect these challenges:</p>
+          <ul>
+          <li>The sheer volume and speed of threat data can be overwhelming</li>
+          <li>You need skilled people who can translate raw intel into actionable detections</li>
+          <li>Threats evolve constantly, so your rules and processes must too</li>
+          <li>Poorly tuned integrations lead to alert fatigue</li>
+          <li>Sharing intel comes with privacy and compliance considerations</li>
+          </ul>
+          <p>Bringing Cyber Threat Intelligence into detection engineering is one of the best ways to shift from a reactive security posture to a proactive one. You stop chasing yesterday’s attacks and start preparing for tomorrow’s.
+          It takes investment in tools, in people, and in processes but the payoff is huge. Better detections, smarter resource allocation, and a team that spends less time putting out fires and more time hunting and improving.
+          The organizations that do this well don’t just respond faster. They see threats coming and position themselves to meet them with confidence.
+          If you’re doing detection engineering, make CTI a core part of your practice and not just another dashboard you glance at once a week. Your future self will thank you.</p>
+        </div>
+        <hr class="separator">
+        <a href="../blog.html" class="blog-back-link">&larr; Back to Blog</a>
+      </div>
+      <div class="window-footer">&copy; 2026 Meridian Labs. All rights reserved.</div>
+    </article>
+  </main>
+  <script src="../js/main.js"></script>
+</body>
+</html>

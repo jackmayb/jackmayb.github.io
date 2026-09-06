@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Every engineering leader knows the slow burn of technical debt, the “good enough for now” code, the duct-taped legacy systems, and undocumented workarounds that eventually grind development to a halt. Cybersecurity has its own version, and the stakes are often…">
+  <title>Detection Debt - Meridian Labs</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='none' stroke='%23333' stroke-width='2'/><ellipse cx='16' cy='16' rx='6' ry='14' fill='none' stroke='%23333' stroke-width='1.5'/><line x1='2' y1='16' x2='30' y2='16' stroke='%23333' stroke-width='1.5'/></svg>">
+</head>
+<body>
+
+  <div class="menu-bar">
+    <div class="menu-bar-logo" aria-label="Meridian Labs">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="16" cy="16" r="13" stroke="#333" stroke-width="2"/>
+        <ellipse cx="16" cy="16" rx="5.5" ry="13" stroke="#333" stroke-width="1.5"/>
+        <line x1="3" y1="16" x2="29" y2="16" stroke="#333" stroke-width="1.5"/>
+        <line x1="5" y1="9" x2="27" y2="9" stroke="#333" stroke-width="1"/>
+        <line x1="5" y1="23" x2="27" y2="23" stroke="#333" stroke-width="1"/>
+      </svg>
+    </div>
+    <nav aria-label="Primary navigation">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../blog.html" class="active">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="menu-bar-spacer"></div>
+  </div>
+  <main class="desktop">
+    <article class="window">
+      <div class="title-bar">
+        <div class="title-bar-buttons" aria-hidden="true">
+          <div class="title-bar-btn close"></div>
+          <div class="title-bar-btn"></div>
+          <div class="title-bar-btn"></div>
+        </div>
+        <div class="title-bar-title">Blog Post</div>
+      </div>
+      <div class="window-content">
+        <a href="../blog.html" class="blog-back-link">&larr; Back to Blog</a>
+        <h1>Detection Debt</h1>
+        <div class="blog-post-meta">February 20, 2026 &bull; Meridian Labs</div>
+        <hr class="separator">
+        <div class="blog-post-content">
+          <p>Every engineering leader knows the slow burn of technical debt, the “good enough for now” code, the duct-taped legacy systems, and undocumented workarounds that eventually grind development to a halt.
+          Cybersecurity has its own version, and the stakes are often higher. We call it Detection Debt.
+          It’s the quiet buildup of outdated, noisy, broken, or abandoned detection rules clogging your SOC. Left unchecked, it wastes analyst time, buries real threats in alert noise, and creates a false sense of security.
+          Here’s how it piles up, what it really costs, and how to start paying it down.</p>
+          <h2>The Main Types of Detection Debt</h2>
+          <p>Detection debt shows up in a few common forms:</p>
+          <ul>
+          <li>Legacy Leftovers: Rules written by people who’ve long since left. No one remembers why they exist or what they were meant to catch. This also includes rules monitoring dead or barely-used software.</li>
+          <li>Silent Failures: The scariest kind. The rule still shows “enabled,” but it’s matching on nothing because a schema changed, a migration happened, or an EDR update broke the logic. Example: A rule watching for EventCode=7045 in Windows logs goes dark after switching EDR platforms. It never fires again, and no one notices for months.</li>
+          <li>Noise Generators: Untuned rules that flood analysts with false positives. Triage starts feeling like digging for gold in a trash heap, and people quietly learn to ignore them.</li>
+          <li>Copy-Paste Traps: Community Sigma rules or vendor intel dropped in verbatim, never adapted to your environment or baseline.</li>
+          </ul>
+          <h2>What It Really Costs Your Team</h2>
+          <p>Every piece of detection debt drags on daily operations.
+          It fuels analyst burnout. Constant false positives create alert fatigue, so when a real threat appears, it’s easy to miss.
+          Onboarding becomes painful. New hires waste weeks learning which alerts to ignore instead of understanding actual threats and that knowledge rarely gets documented.
+          Over time, it erodes trust. When the system cries wolf too often, the team stops believing the alerts. Triage slows, prioritization breaks down, and critical things slip through the cracks.</p>
+          <h2>The Hidden Danger: False Confidence</h2>
+          <p>The daily pain is bad, but the worst part is what leadership doesn’t see.
+          A dashboard showing “500 active rules” looks impressive. In reality, many may be stale, broken, or mentally tuned out by analysts.
+          Key distinction: Detection count is not detection capability.
+          A high rule count is a vanity metric. What matters is whether your detections actually surface real threats and drive investigations. If you can’t answer “When was the last time this rule caught something useful?”, you don’t know if it’s protecting you or just taking up space.</p>
+          <h2>Why Detection Debt Keeps Growing</h2>
+          <p>This rarely comes from negligence. It stems from structure and incentives:</p>
+          <ul>
+          <li>Teams reward building new detections (it looks great in reviews) far more than maintaining or retiring old ones.</li>
+          <li>Fear of deletion: No one wants to be the person who disabled the rule that would’ve caught the next big incident.</li>
+          <li>Employee churn: When rule creators leave, teams inherit undocumented black boxes they’re afraid to touch.</li>
+          </ul>
+          <h2>How to Pay It Down</h2>
+          <p>You can’t wipe it out overnight, but you can manage it better:</p>
+          <ul>
+          <li>Leverage threat hunts: When hunting a technique, also check if your existing rules would have caught it. Did they fire? Did they miss? Turn every hunt into coverage validation.</li>
+          <li>Add basic metadata: Require every rule to have an owner, creation date, data sources, last validated date, and a short threat description. This prevents mystery rules.</li>
+          <li>Create a deprecation process: Define clear criteria for retirement (no true positives in 90 days, superseded technique, etc.), add a quick review, and archive instead of permanently deleting. Make killing rules feel safe.</li>
+          <li>Track better metrics: Ditch “number of active rules.” Instead monitor fire rate, true positive rate, last actionable alert date, and data source health.</li>
+          <li>Schedule maintenance: Put recurring rule reviews on the calendar, quarterly minimum. Treat it like patching: not sexy, but skipping it compounds the problem.</li>
+          </ul>
+          <h2>Detection Debt Shows Your Maturity</h2>
+          <p>Early security programs focus on adding coverage which is normal. Mature teams realize that curating, maintaining, and pruning rules is equally important.
+          Detection debt compounds just like technical debt. The longer you ignore it, the noisier your alerts get and the bigger your hidden gaps become.
+          So stop counting rules.</p>
+        </div>
+        <hr class="separator">
+        <a href="../blog.html" class="blog-back-link">&larr; Back to Blog</a>
+      </div>
+      <div class="window-footer">&copy; 2026 Meridian Labs. All rights reserved.</div>
+    </article>
+  </main>
+  <script src="../js/main.js"></script>
+</body>
+</html>

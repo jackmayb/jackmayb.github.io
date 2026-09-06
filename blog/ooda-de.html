@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Observe: adversaries in the wild, threat intelligence reports, security advisories Orient: assess applicability to the organization, systems, and data Decide: prioritize detection based on potential risk and available tools Act: develop, test, and deploy…">
+  <title>OODA Loop Approach to Detection Engineering - Meridian Labs</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='none' stroke='%23333' stroke-width='2'/><ellipse cx='16' cy='16' rx='6' ry='14' fill='none' stroke='%23333' stroke-width='1.5'/><line x1='2' y1='16' x2='30' y2='16' stroke='%23333' stroke-width='1.5'/></svg>">
+</head>
+<body>
+
+  <div class="menu-bar">
+    <div class="menu-bar-logo" aria-label="Meridian Labs">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="16" cy="16" r="13" stroke="#333" stroke-width="2"/>
+        <ellipse cx="16" cy="16" rx="5.5" ry="13" stroke="#333" stroke-width="1.5"/>
+        <line x1="3" y1="16" x2="29" y2="16" stroke="#333" stroke-width="1.5"/>
+        <line x1="5" y1="9" x2="27" y2="9" stroke="#333" stroke-width="1"/>
+        <line x1="5" y1="23" x2="27" y2="23" stroke="#333" stroke-width="1"/>
+      </svg>
+    </div>
+    <nav aria-label="Primary navigation">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../blog.html" class="active">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="menu-bar-spacer"></div>
+  </div>
+  <main class="desktop">
+    <article class="window">
+      <div class="title-bar">
+        <div class="title-bar-buttons" aria-hidden="true">
+          <div class="title-bar-btn close"></div>
+          <div class="title-bar-btn"></div>
+          <div class="title-bar-btn"></div>
+        </div>
+        <div class="title-bar-title">Blog Post</div>
+      </div>
+      <div class="window-content">
+        <a href="../blog.html" class="blog-back-link">&larr; Back to Blog</a>
+        <h1>OODA Loop Approach to Detection Engineering</h1>
+        <div class="blog-post-meta">June 27, 2024 &bull; Meridian Labs</div>
+        <hr class="separator">
+        <div class="blog-post-content">
+          <p>Observe: adversaries in the wild, threat intelligence reports, security advisories</p>
+          <p>Orient: assess applicability to the organization, systems, and data</p>
+          <p>Decide: prioritize detection based on potential risk and available tools</p>
+          <p>Act: develop, test, and deploy detection logic</p>
+          <ol>
+          <li><strong>Observe</strong>:<ul>
+          <li><strong>Adversaries in the Wild</strong>: Monitoring real-time attacks and understanding the tactics, techniques, and procedures (TTPs) used by adversaries can help an organization anticipate and defend against similar threats. This includes analyzing honeypots, darknet forums, or even public breach reports.</li>
+          <li><strong>Threat Intelligence Reports</strong>: These are curated information feeds or detailed reports provided by specialized firms or shared community efforts that track emerging threats. They might detail specific malware strains, attack campaigns, or TTPs of known threat groups.</li>
+          <li><strong>Security Advisories</strong>: Many software vendors and security organizations release advisories about known vulnerabilities or threats. These advisories can often come with indicators of compromise (IoCs) and can provide valuable data to enhance detection mechanisms.</li>
+          </ul>
+          </li>
+          <li><strong>Orient</strong>:<ul>
+          <li><strong>Assess Applicability to the Organization</strong>: Not all threats or vulnerabilities are relevant to every organization. A vulnerability in a specific Linux distribution might be irrelevant to an organization running only Windows, for example.</li>
+          <li><strong>Systems and Data</strong>: Understand which systems are critical, which data is sensitive, and the overall network infrastructure. This will help in determining which threats are most relevant and where to focus detection efforts.</li>
+          <li><strong>Understand Current Security Posture and Existing Capabilities</strong><ul>
+          <li><strong>Threat Modeling</strong>: Conduct a threat model of the organization&#39;s current security stack. This includes identifying strengths, weaknesses, and gaps in existing security measures. Consider factors such as:<ul>
+          <li>Network segmentation and access controls</li>
+          <li>Patch management processes</li>
+          <li>User awareness and training</li>
+          <li>Incident response readiness</li>
+          </ul>
+          </li>
+          <li><strong>Inventory of Existing Detection Capabilities</strong>: Create a comprehensive inventory of current detection tools, technologies, and processes. This may include:<ul>
+          <li>SIEM (Security Information and Event Management) systems</li>
+          <li>EDR (Endpoint Detection and Response) solutions</li>
+          <li>Network monitoring tools</li>
+          <li>Log analysis capabilities</li>
+          <li>Custom-developed detection rules or scripts</li>
+          </ul>
+          </li>
+          </ul>
+          </li>
+          </ul>
+          </li>
+          <li><strong>Decide</strong>:<ul>
+          <li><strong>Prioritize Detection Based on Potential Risk</strong>: Use a risk-based approach to decide where to invest detection efforts. For instance, a threat exploiting a zero-day vulnerability in a commonly used application within the organization should be prioritized.</li>
+          <li><strong>Available Tools</strong>: The tools and platforms an organization has will impact how it can detect threats. An organization might prioritize detections that can be readily implemented in its existing SIEM system, for example.</li>
+          <li><strong>Consider Impact and Likelihood of Threats</strong><ul>
+          <li><strong>Impact Assessment</strong>: Evaluate the potential consequences of each threat if it were to materialize. Consider factors such as:<ul>
+          <li>Financial loss</li>
+          <li>Operational disruption</li>
+          <li>Reputational damage</li>
+          <li>Data breach or loss</li>
+          <li>Regulatory non-compliance</li>
+          </ul>
+          </li>
+          <li><strong>Likelihood Estimation</strong>: Assess the probability of each threat occurring based on:<ul>
+          <li>Current threat landscape</li>
+          <li>Organization&#39;s industry and size</li>
+          <li>Geographic location</li>
+          <li>Existing security controls</li>
+          </ul>
+          </li>
+          <li><strong>Risk Matrix</strong>: Use a risk matrix to plot threats based on their impact and likelihood. This visual representation can help in prioritizing detection efforts:<ul>
+          <li>High impact, high likelihood threats should receive top priority</li>
+          <li>Low impact, low likelihood threats may be addressed later or accepted as residual risk</li>
+          </ul>
+          </li>
+          </ul>
+          </li>
+          </ul>
+          </li>
+          <li><strong>Act</strong>:<ul>
+          <li><strong>Develop</strong>: Create signatures, heuristics, or behavioral analytics rules to detect potential malicious activity. This could be as simple as a YARA rule for malware or as complex as a sequence of events in a UEBA system.</li>
+          <li><strong>Test</strong>: Before deploying new detection logic, it&#39;s essential to test it in a controlled environment. This ensures the logic works as intended and reduces false positives. Simulating attacks (red teaming) can be beneficial here.</li>
+          <li><strong>Deploy</strong>: Once tested, the detection logic can be deployed to production environments. Continuous monitoring and tweaking are essential, as adversaries constantly change their methods. Integration with Incident Response Processes is a crucial aspect of effective detection engineering. This integration begins with aligning alert categories to existing incident response playbooks, ensuring that each alert triggers an appropriate and predefined response. It&#39;s essential to establish a seamless handoff of information from detection systems to incident response teams, providing them with all necessary context to act swiftly and effectively. To optimize efficiency, consider implementing automated response actions for high-confidence, low-risk alerts, which can significantly reduce the workload on analysts.</li>
+          </ul>
+          </li>
+          </ol>
+        </div>
+        <hr class="separator">
+        <a href="../blog.html" class="blog-back-link">&larr; Back to Blog</a>
+      </div>
+      <div class="window-footer">&copy; 2026 Meridian Labs. All rights reserved.</div>
+    </article>
+  </main>
+  <script src="../js/main.js"></script>
+</body>
+</html>

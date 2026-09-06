@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Wireless networks present unique security challenges due to the broadcast nature of radio communications. A rigorous wireless penetration test methodology is crucial for evaluating the security posture of an organization&#39;s wireless infrastructure. This…">
+  <title>Quick Wireless Methodology - Meridian Labs</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='none' stroke='%23333' stroke-width='2'/><ellipse cx='16' cy='16' rx='6' ry='14' fill='none' stroke='%23333' stroke-width='1.5'/><line x1='2' y1='16' x2='30' y2='16' stroke='%23333' stroke-width='1.5'/></svg>">
+</head>
+<body>
+
+  <div class="menu-bar">
+    <div class="menu-bar-logo" aria-label="Meridian Labs">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <circle cx="16" cy="16" r="13" stroke="#333" stroke-width="2"/>
+        <ellipse cx="16" cy="16" rx="5.5" ry="13" stroke="#333" stroke-width="1.5"/>
+        <line x1="3" y1="16" x2="29" y2="16" stroke="#333" stroke-width="1.5"/>
+        <line x1="5" y1="9" x2="27" y2="9" stroke="#333" stroke-width="1"/>
+        <line x1="5" y1="23" x2="27" y2="23" stroke="#333" stroke-width="1"/>
+      </svg>
+    </div>
+    <nav aria-label="Primary navigation">
+      <a href="../index.html">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../blog.html" class="active">Blog</a>
+      <a href="../contact.html">Contact</a>
+    </nav>
+    <div class="menu-bar-spacer"></div>
+  </div>
+  <main class="desktop">
+    <article class="window">
+      <div class="title-bar">
+        <div class="title-bar-buttons" aria-hidden="true">
+          <div class="title-bar-btn close"></div>
+          <div class="title-bar-btn"></div>
+          <div class="title-bar-btn"></div>
+        </div>
+        <div class="title-bar-title">Blog Post</div>
+      </div>
+      <div class="window-content">
+        <a href="../blog.html" class="blog-back-link">&larr; Back to Blog</a>
+        <h1>Quick Wireless Methodology</h1>
+        <div class="blog-post-meta">March 10, 2022 &bull; Meridian Labs</div>
+        <hr class="separator">
+        <div class="blog-post-content">
+          <p>Wireless networks present unique security challenges due to the broadcast nature of radio communications. A rigorous wireless penetration test methodology is crucial for evaluating the security posture of an organization&#39;s wireless infrastructure. This assessment involves both passive discovery techniques for mapping and profiling wireless networks, as well as active attacks to exploit vulnerabilities in wireless implementations. The testing begins with passive reconnaissance to identify authorized and rogue wireless access points. While the passive discovery stage allows mapping of the known wireless infrastructure, rogue AP detection involves active scanning across all wireless channels to uncover hidden threats. This is followed by more intrusive attacks to demonstrate risk, such as cracking wireless encryption, operating an evil twin access point, and testing wireless network segmentation. By leveraging a combination of passive wireless network discovery, rogue AP detection, and targeted wireless attacks, this methodology provides a comprehensive evaluation of wireless infrastructure security. The layered approach helps identify vulnerabilities in wireless configurations, encryption protocols, access controls, and network segmentation that could be exploited by malicious actors. Conducting controlled simulations of real-world wireless attacks provides actionable risk insights that allow organizations to improve protections and minimize avenues for wireless breaches. A rigorous wireless pen test methodology is invaluable for proactively hardening the security posture against the unique threats faced by today’s wireless networks.</p>
+          <p>A point to highlight since it can often be overlooked is rogue AP discovery. This involves using wireless scanning tools to identify any unauthorized or unknown wireless access points connected to the network. This is an important step because rogue APs can enable backdoor wireless access that bypasses security controls. Attackers may plug in their own cheap AP into an open network jack to create wireless access. Even misconfigured authorized APs can act as rogues if they are installed without IT knowledge. By surveying across all wireless channels and comparing to an inventory of authorized APs, penetration testers can identify any rogue devices. Analyzing the rogue&#39;s traffic, encryption, SSID, and connected clients provides insight into whether it poses a security risk or is being used maliciously. Identifying and removing rogue APs is critical for maintaining full control and monitoring of wireless access to the network.</p>
+          <h2>Passive Discovery</h2>
+          <ul>
+          <li>Use wireless network scanning tools like Kismet or Wireshark to identify SSIDs, channel utilization, encryption types, client devices, and broadcast traffic patterns.</li>
+          <li>Take note of what version of WPA encryption each network is using (WPA, WPA2, WPA3).</li>
+          <li>Analyze traffic to fingerprint wireless networks, client devices, and applications in use.</li>
+          <li>Review wireless configuration settings like channels, transmit power, SSID broadcast, and wireless security protocols in use.</li>
+          <li>Use airodump-ng or other tools to capture WPA2 authentication handshakes for networks using WPA2 security.</li>
+          <li>Collect as many WPA2 handshakes as possible to allow for offline password cracking attacks. The more handshakes, the higher likelihood of capturing reusable credentials.</li>
+          <li>Review authentication mechanisms (WPA-PEAP/RADIUS/etc) to identify any weak or outdated protocols in use.</li>
+          </ul>
+          <h2>Rogue AP Discovery</h2>
+          <ul>
+          <li>Use tools like Kismet or aircrack-ng to scan across frequencies to identify rogue APs with MAC addresses not matching your asset inventory.</li>
+          <li>Analyze traffic patterns, client connections, and DHCP scopes to determine if the rogue AP is providing network access or is being used maliciously.</li>
+          <li>Use directional antennas or reducing scanning frequency range to hone in on potential rogue APs.</li>
+          <li>Filter out known good SSIDs</li>
+          </ul>
+          <h2>Attacks</h2>
+          <ul>
+          <li>Use aircrack-ng, hcxtools, or other tools to capture WPA handshakes and attempt offline PSK cracking if weak passwords are used.</li>
+          <li>Configuring an evil twin AP to mimic the SSID and encryption of the target network to trick clients into connecting and capture credentials or data.</li>
+          <li>Attempt connecting to any open or weakly encrypted networks to directly access resources and pivot.</li>
+          <li>Confirm segmentation controls are working properly between guest and corporate networks.</li>
+          </ul>
+        </div>
+        <hr class="separator">
+        <a href="../blog.html" class="blog-back-link">&larr; Back to Blog</a>
+      </div>
+      <div class="window-footer">&copy; 2026 Meridian Labs. All rights reserved.</div>
+    </article>
+  </main>
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,674 @@
+/* ============================================
+   Meridian Labs — Mac OS 9 Platinum Theme
+   ============================================ */
+
+/* --- Reset & Base --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: unset;
+}
+
+body {
+  font-family: "Geneva", "Verdana", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #3a6ea5;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, #4a7fb5 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 20%, #2d5a8a 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 80%, #4682b4 0%, transparent 40%);
+  color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+}
+
+a {
+  color: #0000cc;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #551a8b;
+}
+
+a:hover {
+  color: #0000ff;
+}
+
+a:active {
+  color: #ff0000;
+}
+
+/* --- Menu Bar --- */
+.menu-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 24px;
+  background: linear-gradient(180deg, #eeeeee 0%, #cccccc 100%);
+  border-bottom: 1px solid #888888;
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  z-index: 1000;
+  font-family: "Charcoal", "Chicago", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  user-select: none;
+}
+
+.menu-bar-logo {
+  display: flex;
+  align-items: center;
+  padding: 0 12px 0 4px;
+  font-weight: bold;
+  font-size: 14px;
+  color: #333;
+  border-right: 1px solid #aaa;
+  margin-right: 4px;
+  height: 100%;
+}
+
+.menu-bar-logo svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.menu-bar nav {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.menu-bar nav a {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 12px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.menu-bar nav a:hover,
+.menu-bar nav a.active {
+  background-color: #0000cc;
+  color: #fff;
+}
+
+.menu-bar nav a:visited {
+  color: #000;
+}
+
+.menu-bar nav a:hover:visited,
+.menu-bar nav a.active:visited {
+  color: #fff;
+}
+
+.menu-bar-spacer {
+  flex: 1;
+}
+
+/* --- Desktop Area --- */
+.desktop {
+  margin-top: 24px;
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* --- Window Chrome --- */
+.window {
+  background: #dddddd;
+  border: 1px solid #000;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  box-shadow:
+    1px 1px 0 #000,
+    inset 1px 1px 0 #fff,
+    inset -1px -1px 0 #888;
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.title-bar {
+  height: 22px;
+  background:
+    repeating-linear-gradient(
+      180deg,
+      #dddddd 0px,
+      #dddddd 1px,
+      #bbbbbb 1px,
+      #bbbbbb 2px,
+      #ffffff 2px,
+      #ffffff 3px,
+      #bbbbbb 3px,
+      #bbbbbb 4px
+    );
+  border-bottom: 1px solid #888;
+  display: flex;
+  align-items: center;
+  padding: 0 6px;
+  position: relative;
+}
+
+.title-bar-buttons {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  z-index: 1;
+}
+
+.title-bar-btn {
+  width: 12px;
+  height: 12px;
+  border: 1px solid #666;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-radius: 0;
+  background: #dddddd;
+  cursor: default;
+}
+
+.title-bar-btn.close {
+  background: #dddddd;
+  position: relative;
+}
+
+.title-bar-title {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: "Charcoal", "Chicago", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #000;
+  pointer-events: none;
+}
+
+.window-content {
+  padding: 20px 24px;
+  background: #ffffff;
+  border-top: 1px solid #fff;
+  min-height: 200px;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4 {
+  font-family: "Charcoal", "Chicago", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #000;
+}
+
+h1 {
+  font-size: 22px;
+  margin-bottom: 12px;
+}
+
+h2 {
+  font-size: 17px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+h3 {
+  font-size: 14px;
+  margin-top: 16px;
+  margin-bottom: 6px;
+}
+
+p {
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+strong {
+  font-weight: bold;
+}
+
+ul, ol {
+  margin: 8px 0 12px 24px;
+}
+
+li {
+  margin-bottom: 4px;
+  line-height: 1.5;
+}
+
+/* --- Home Page --- */
+.hero {
+  text-align: center;
+  padding: 16px 0 8px;
+}
+
+.hero-logo {
+  margin-bottom: 8px;
+}
+
+.hero-logo svg {
+  width: 64px;
+  height: 64px;
+}
+
+.hero h1 {
+  font-size: 28px;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
+}
+
+.hero .tagline {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #fff;
+  margin: 16px 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.service-item {
+  background: #eeeeee;
+  border: 1px solid #aaa;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  padding: 12px;
+  box-shadow: inset -1px -1px 0 #888, inset 1px 1px 0 #fff;
+}
+
+.service-item h3 {
+  margin-top: 0;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.service-item p {
+  font-size: 12px;
+  color: #333;
+  margin-bottom: 0;
+}
+
+.service-icon {
+  font-size: 20px;
+  margin-bottom: 4px;
+  display: block;
+}
+
+/* --- About Page --- */
+.about-section {
+  margin-bottom: 16px;
+}
+
+.about-section h2 {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 4px;
+}
+
+/* --- Contact Page --- */
+.contact-form {
+  max-width: 440px;
+}
+
+.form-group {
+  margin-bottom: 12px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  font-size: 12px;
+  margin-bottom: 3px;
+  font-family: "Charcoal", "Chicago", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 4px 6px;
+  font-family: "Geneva", "Verdana", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  border: 2px solid #888;
+  border-top-color: #555;
+  border-left-color: #555;
+  border-right-color: #ddd;
+  border-bottom-color: #ddd;
+  background: #fff;
+  outline: none;
+  box-shadow: inset 1px 1px 2px rgba(0,0,0,0.15);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0000cc;
+}
+
+.form-group textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.btn {
+  font-family: "Charcoal", "Chicago", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 20px;
+  background: #dddddd;
+  border: 2px solid #aaa;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  border-right-color: #666;
+  border-bottom-color: #666;
+  cursor: pointer;
+  box-shadow: 1px 1px 0 #000;
+  outline: none;
+}
+
+.btn:active {
+  border-top-color: #666;
+  border-left-color: #666;
+  border-right-color: #fff;
+  border-bottom-color: #fff;
+  box-shadow: none;
+  padding: 5px 19px 3px 21px;
+}
+
+.btn-primary {
+  background: #dddddd;
+  border: 3px solid #000;
+  border-radius: 6px;
+  padding: 4px 24px;
+  box-shadow: none;
+}
+
+.btn-primary:active {
+  background: #bbbbbb;
+  padding: 5px 23px 3px 25px;
+}
+
+.contact-info {
+  margin-top: 20px;
+  padding: 12px;
+  background: #eeeeee;
+  border: 1px solid #aaa;
+  border-top-color: #fff;
+  border-left-color: #fff;
+  box-shadow: inset -1px -1px 0 #888, inset 1px 1px 0 #fff;
+}
+
+.contact-info p {
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+
+/* --- Blog Listing --- */
+.blog-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.blog-entry {
+  padding: 12px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.blog-entry:last-child {
+  border-bottom: none;
+}
+
+.blog-entry-title {
+  font-family: "Charcoal", "Chicago", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.blog-entry-title a {
+  color: #0000cc;
+  text-decoration: none;
+}
+
+.blog-entry-title a:hover {
+  text-decoration: underline;
+}
+
+.blog-entry-date {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.blog-entry-excerpt {
+  font-size: 13px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.blog-entry-read-more {
+  font-size: 12px;
+  margin-top: 4px;
+  display: inline-block;
+}
+
+/* --- Blog Post --- */
+.blog-post-meta {
+  font-size: 11px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.blog-post-content h2 {
+  font-size: 16px;
+  margin-top: 24px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 4px;
+}
+
+.blog-post-content p {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.blog-post-content ul,
+.blog-post-content ol {
+  font-size: 13px;
+}
+
+.blog-post-content strong {
+  font-weight: bold;
+}
+
+.blog-back-link {
+  display: inline-block;
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+
+/* --- Scrollbar (Webkit) --- */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ddd;
+  border-left: 1px solid #aaa;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border: 1px solid #888;
+  border-top-color: #eee;
+  border-left-color: #eee;
+}
+
+::-webkit-scrollbar-button {
+  background: #ddd;
+  border: 1px solid #888;
+  border-top-color: #eee;
+  border-left-color: #eee;
+  height: 16px;
+}
+
+/* --- Footer --- */
+.window-footer {
+  padding: 8px 24px;
+  background: #dddddd;
+  border-top: 1px solid #aaa;
+  font-size: 11px;
+  color: #666;
+  text-align: center;
+}
+
+/* --- Responsive --- */
+@media (max-width: 640px) {
+  .desktop {
+    padding: 12px 8px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .window-content {
+    padding: 14px 16px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .menu-bar nav a {
+    padding: 0 8px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 420px) {
+  .menu-bar {
+    font-size: 11px;
+    padding: 0 4px;
+  }
+
+  .menu-bar-logo {
+    padding: 0 6px 0 2px;
+    font-size: 12px;
+  }
+
+  .menu-bar nav a {
+    padding: 0 5px;
+    font-size: 10px;
+  }
+}
+
+
+/* --- Accessibility, article code, and responsive refinements --- */
+body {
+  font-size: 1rem;
+}
+
+.menu-bar nav a,
+.form-group label,
+.btn,
+.blog-entry-read-more,
+.blog-back-link {
+  font-size: 0.875rem;
+}
+
+.service-item p,
+.blog-entry-excerpt,
+.blog-post-content p,
+.blog-post-content ul,
+.blog-post-content ol {
+  font-size: 1rem;
+}
+
+.form-status {
+  color: #555;
+  font-size: 0.85rem;
+  margin-top: 12px;
+}
+
+.blog-post-content pre {
+  overflow-x: auto;
+  margin: 12px 0;
+  padding: 12px;
+  background: #eeeeee;
+  border: 1px solid #aaa;
+  box-shadow: inset 1px 1px 0 #888, inset -1px -1px 0 #fff;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.blog-post-content code {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.blog-post-content blockquote {
+  margin: 12px 0;
+  padding-left: 14px;
+  border-left: 3px solid #888;
+  color: #333;
+}
+
+@media (max-width: 640px) {
+  .menu-bar {
+    height: auto;
+    min-height: 32px;
+    padding: 0 4px;
+  }
+
+  .menu-bar-logo {
+    padding: 0 6px 0 2px;
+  }
+
+  .menu-bar nav a {
+    min-height: 32px;
+    padding: 0 7px;
+    font-size: 0.8125rem;
+  }
+
+  .desktop {
+    margin-top: 32px;
+    padding: 12px;
+  }
+
+  .window-content {
+    padding: 18px 16px;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+}

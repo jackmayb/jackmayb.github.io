@@ -1,18 +1,104 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Meridian Labs provides security research, threat hunting, detection engineering, and adversary simulation services.">
+  <title>Meridian Labs</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='16' r='14' fill='none' stroke='%23333' stroke-width='2'/><ellipse cx='16' cy='16' rx='6' ry='14' fill='none' stroke='%23333' stroke-width='1.5'/><line x1='2' y1='16' x2='30' y2='16' stroke='%23333' stroke-width='1.5'/></svg>">
+</head>
+<body>
 
-<div class="posts">
-  {% for post in site.posts %}
-    <article class="post">
+  <!-- Menu Bar -->
+  <div class="menu-bar">
+    <div class="menu-bar-logo">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="16" cy="16" r="13" stroke="#333" stroke-width="2"/>
+        <ellipse cx="16" cy="16" rx="5.5" ry="13" stroke="#333" stroke-width="1.5"/>
+        <line x1="3" y1="16" x2="29" y2="16" stroke="#333" stroke-width="1.5"/>
+        <line x1="5" y1="9" x2="27" y2="9" stroke="#333" stroke-width="1"/>
+        <line x1="5" y1="23" x2="27" y2="23" stroke="#333" stroke-width="1"/>
+      </svg>
+    </div>
+    <nav>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="menu-bar-spacer"></div>
+  </div>
 
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {{ post.excerpt }}
+  <!-- Desktop -->
+  <div class="desktop">
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-buttons">
+          <div class="title-bar-btn close"></div>
+          <div class="title-bar-btn"></div>
+          <div class="title-bar-btn"></div>
+        </div>
+        <div class="title-bar-title">Meridian Labs</div>
       </div>
+      <div class="window-content">
 
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read More</a>
-    </article>
-  {% endfor %}
-</div>
+        <div class="hero">
+          <div class="hero-logo">
+            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="28" stroke="#333" stroke-width="2.5"/>
+              <ellipse cx="32" cy="32" rx="11" ry="28" stroke="#333" stroke-width="2"/>
+              <ellipse cx="32" cy="32" rx="20" ry="28" stroke="#333" stroke-width="1" stroke-dasharray="4 3"/>
+              <line x1="4" y1="32" x2="60" y2="32" stroke="#333" stroke-width="2"/>
+              <line x1="8" y1="18" x2="56" y2="18" stroke="#333" stroke-width="1"/>
+              <line x1="8" y1="46" x2="56" y2="46" stroke="#333" stroke-width="1"/>
+              <circle cx="32" cy="32" r="3" fill="#333"/>
+            </svg>
+          </div>
+          <h1>Meridian Labs</h1>
+          <p class="tagline">Precision Security. Global Coverage. Absolute Confidence.</p>
+        </div>
+
+        <hr class="separator">
+
+        <p>Meridian Labs is a boutique cybersecurity consulting firm operating at the pinnacle of security expertise. Like the meridian lines that encircle the globe, our protection is comprehensive, far-reaching, and without gaps.</p>
+
+        <p>For three years, we have partnered with organizations to fortify their defenses, uncover hidden threats, and build resilient security postures that withstand the most sophisticated adversaries.</p>
+
+        <hr class="separator">
+
+        <h2>Our Services</h2>
+
+        <div class="services-grid">
+          <div class="service-item">
+            <span class="service-icon">&#x1F50D;</span>
+            <h3>Security Research</h3>
+            <p>Deep technical research into vulnerabilities, exploit techniques, and emerging attack surfaces. We find what others miss.</p>
+          </div>
+          <div class="service-item">
+            <span class="service-icon">&#x1F3AF;</span>
+            <h3>Threat Hunting</h3>
+            <p>Proactive identification of threats lurking within your environment. We don't wait for alerts &mdash; we hunt.</p>
+          </div>
+          <div class="service-item">
+            <span class="service-icon">&#x1F6E1;</span>
+            <h3>Detection Engineering</h3>
+            <p>Building high-fidelity detection logic that catches real threats while minimizing noise and false positives.</p>
+          </div>
+          <div class="service-item">
+            <span class="service-icon">&#x2694;</span>
+            <h3>Adversary Simulations</h3>
+            <p>Realistic attack simulations that test your defenses against the tactics, techniques, and procedures of real-world adversaries.</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="window-footer">
+        &copy; 2026 Meridian Labs. All rights reserved.
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
